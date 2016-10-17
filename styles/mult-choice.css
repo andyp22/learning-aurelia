@@ -1,0 +1,20 @@
+.mult-choice {
+	margin: 0 auto;
+}
+
+.mult-choice label {
+	float: left;
+}
+
+.feedback-popup {
+  display: none;
+  font-weight: bold;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}

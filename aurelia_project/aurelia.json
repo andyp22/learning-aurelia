@@ -1,5 +1,5 @@
 {
-  "name": "contact-manager",
+  "name": "learning-aurelia",
   "type": "project:application",
   "platform": {
     "id": "web",
@@ -24,7 +24,7 @@
   },
   "cssProcessor": {
     "id": "none",
-    "displayName": "None",
+    "displayName": "none",
     "fileExtension": ".css",
     "source": "src/**/*.css"
   },
@@ -137,18 +137,12 @@
             "name": "bootstrap",
             "path": "../node_modules/bootstrap/dist",
             "main": "js/bootstrap.min",
-            "deps": ["jquery"],
+            "deps": [
+              "jquery"
+            ],
             "exports": "$",
             "resources": [
               "css/bootstrap.css"
-            ]
-          },
-          {
-            "name": "nprogress",
-            "path": "../node_modules/nprogress",
-            "main": "nprogress",
-            "resources": [
-              "nprogress.css"
             ]
           }
         ]

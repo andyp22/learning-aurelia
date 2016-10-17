@@ -1,17 +1,3 @@
-# ====== #
-# Node #
-# ====== #
-node_modules/
-npm-debug.log
-
-# ============ #
-# OS generated #
-# ============ #
-.DS_Store*
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-[Tt]humbs.db
-.project
+node_modules
+.idea
+.DS_STORE

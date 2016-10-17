@@ -1,9 +1,0 @@
-# /node_modules and /bower_components ignored by default
-*/.vscode
-*/aurelia_project
-*/custom_typings
-*/node_modules
-*/scripts
-*/typings
-*/test
-*/*.conf.js

@@ -1,2 +1,2 @@
-# Aurelia Contact Manager
-This branch is based on the [Aurelia Contact Manager example](http://aurelia.io/hub.html#/doc/article/aurelia/framework/latest/contact-manager-tutorial).
+# Aurelia Forms
+This branch is based is me playing with forms and quizzes in Aurelia.
