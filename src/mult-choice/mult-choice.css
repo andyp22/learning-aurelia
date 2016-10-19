@@ -1,16 +1,10 @@
-html, body {
-	width: 100%;
-	height: 100%;
-}
-
-p {
-	margin: 0;
-	padding: 0;
-}
-
 .mult-choice {
 	margin: 0 auto;
 	float: none;
+}
+
+.mult-choice ul {
+	padding-left: 10px;
 }
 
 .choice {
@@ -27,6 +21,7 @@ p {
 
 .choice-label {
 	padding-left: 10px;
+	line-height: 30px;
 }
 
 .feedback-popup {

@@ -1,0 +1,24 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./mult-choice.css"></require>
+  <div class="mult-choice">
+    <h2>${prompt}</h2>
+
+    <form submit.trigger="submit()">
+      <ul>
+        <li class="choice" repeat.for="choice of choices">
+          <label>
+            <input type="radio" name="choices" model.bind="choice" checked.bind="$parent.selectedChoice" />
+            <span class="choice-label">${choice.choiceText}</span>
+          </label>
+        </li>
+      </ul>
+      <div class="form-controls">
+        <input type="submit" class="btn btn-primary" value="Submit">
+        <input type="button" class="btn btn-danger" value="Clear" click.trigger="clear()">
+      </div>
+    </form>
+
+    <div class="feedback-popup"><p innerhtml.one-way="feedbackText"></p></div>
+  </div>
+</template>

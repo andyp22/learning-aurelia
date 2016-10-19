@@ -1,45 +1,21 @@
-declare var $;
+import {
+  RouterConfiguration,
+  Router,
+} from 'aurelia-router';
 
-class Choice {
-  constructor(public id: number, public choiceText:string) { }
-}
+import { DataAPI } from './data-api';
 
 export class App {
-  prompt:string = 'Please select a choice:';
-  correctChoice:number = 0;
-  selectedChoice:Choice = null;
-  feedbackText:string = '';
-  choices:Array<Choice> = [
-    new Choice(0, 'The first choice (correct)'),
-    new Choice(1, 'The second choice'),
-    new Choice(2, 'The third choice')
-  ];
+  router:Router;
 
-  get correct():boolean {
-    return this.selectedChoice.id === this.correctChoice;
-  }
-
-  submit() {
-    this.clearFeedback();
-    if (this.correct) {
-      this.feedbackText = 'That is the correct answer';
-      $('.feedback-popup p').addClass('correct');
-    } else {
-      this.feedbackText = 'That was not the correct answer.';
-      $('.feedback-popup p').addClass('incorrect');
-    }
-    $('.feedback-popup').show();
-  }
-
-  clear() {
-    this.clearFeedback();
-    this.selectedChoice = null;
-  }
-
-  clearFeedback() {
-    $('.feedback-popup').hide();
-    $('.feedback-popup p').removeClass('correct incorrect');
-    this.feedbackText = '';
-  }
-
+  configureRouter(config: RouterConfiguration, router: Router): void {
+    this.router = router;
+    config.title = 'Forms and Quizzes';
+    config.map([
+      { route: ['', 'home'],       name: 'home',       moduleId: 'home/index' },
+      { route: 'multChoice',       name: 'multChoice', moduleId: 'mult-choice/mult-choice', title: 'Multiple Choice' },
+      // { route: 'users/:id/detail', name: 'userDetail', moduleId: 'users/detail' },
+      // { route: 'files/*path',      name: 'files',      moduleId: 'files/index',   href:'#files',   nav: 0 }
+    ]);
+  };
 }
