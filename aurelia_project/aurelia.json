@@ -43,7 +43,10 @@
     "elements": "src/resources/elements",
     "attributes": "src/resources/attributes",
     "valueConverters": "src/resources/value-converters",
-    "bindingBehaviors": "src/resources/binding-behaviors"
+    "bindingBehaviors": "src/resources/binding-behaviors",
+    "fa": "node_modules/font-awesome",
+    "faCssOutput": "src/stylesheets",
+    "faFontsOutput": "fonts"
   },
   "testFramework": {
     "id": "jasmine",
@@ -136,7 +139,7 @@
           {
             "name": "bootstrap",
             "path": "../node_modules/bootstrap/dist",
-            "main": "js/bootstrap.min",
+            "main": "js/bootstrap",
             "deps": [
               "jquery"
             ],
